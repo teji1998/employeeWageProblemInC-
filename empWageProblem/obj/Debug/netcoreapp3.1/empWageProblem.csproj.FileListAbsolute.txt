@@ -1,0 +1,13 @@
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\bin\Debug\netcoreapp3.1\empWageProblem.exe
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\bin\Debug\netcoreapp3.1\empWageProblem.deps.json
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\bin\Debug\netcoreapp3.1\empWageProblem.runtimeconfig.json
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\bin\Debug\netcoreapp3.1\empWageProblem.runtimeconfig.dev.json
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\bin\Debug\netcoreapp3.1\empWageProblem.dll
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\bin\Debug\netcoreapp3.1\empWageProblem.pdb
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.csprojAssemblyReference.cache
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.AssemblyInfoInputs.cache
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.AssemblyInfo.cs
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.csproj.CoreCompileInputs.cache
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.dll
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.pdb
+C:\Users\PRITHVIL5\source\repos\empWageProblem\empWageProblem\obj\Debug\netcoreapp3.1\empWageProblem.genruntimeconfig.cache
