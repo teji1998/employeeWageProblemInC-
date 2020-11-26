@@ -23,13 +23,13 @@ namespace empWageProblem
             //Welcome message
             Console.WriteLine("Welcome to employee wage computation problem!");
 
-            //Random class reference
-            Random random = new Random();
-            int attendance = random.Next(0, 3);
-
             //using for loop
             for (int days = 0; days <= NUMBER_OF_WORKING_DAYS; days++)
             {
+                //Random class reference
+                Random random = new Random();
+                int attendance = random.Next(0, 3);
+
                 //Using switch case to see if employee is present or not
                 //To check working hours for part-time or full-time employee
                 switch (attendance)
@@ -48,6 +48,7 @@ namespace empWageProblem
                         break;
 
                 }
+
                 //To calculate daily wage of employee 
                 employeeWage = HOURLY_WAGE * employeeHours;
                 //To calculate monthly wage of employee
