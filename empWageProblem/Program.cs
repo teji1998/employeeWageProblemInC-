@@ -9,6 +9,8 @@ namespace empWageProblem
             //constant
             const int IS_PRESENT = 1;
             const int HOURLY_WAGE = 20;
+            const int FULL_TIME_EMPLOYEE_HOURS = 8;
+            const int NOT_PRESENT_EMPLOYEE_HOURS = 0;
 
             //variables
             int employeeHours = 0;
@@ -24,12 +26,12 @@ namespace empWageProblem
             // using if else loop to check if employee is present or not
             if (attendance == IS_PRESENT)
             {
-                employeeHours = 8;;
+                employeeHours = FULL_TIME_EMPLOYEE_HOURS;
                 Console.WriteLine("The employee is present!");
             }
             else
             {
-                employeeHours = 0;
+                employeeHours = NOT_PRESENT_EMPLOYEE_HOURS;
                 Console.WriteLine("The employee is not present");
             }
 
