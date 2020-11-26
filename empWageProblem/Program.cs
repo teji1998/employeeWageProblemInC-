@@ -25,8 +25,26 @@ namespace empWageProblem
             Random random = new Random();
             int attendance = random.Next(0, 3);
 
+            //Using switch case to see if employee is present or not
             //To check working hours for part-time or full-time employee
-            if (attendance == IS_FULL_TIME)
+            switch (attendance)
+            {
+                case IS_FULL_TIME:
+                    employeeHours = FULL_TIME_EMPLOYEE_HOURS;
+                    Console.WriteLine("The full-time employee is present!");
+                    break;
+                case IS_PART_TIME:
+                    employeeHours = PART_TIME_EMPLOYEE_HOURS;
+                    Console.WriteLine("The part-time employee is present!");
+                    break;
+                default:
+                    employeeHours = ABSENT_EMPLOYEE_HOURS;
+                    Console.WriteLine("The employee is absent");
+                    break;
+
+            }
+
+            /*if (attendance == IS_FULL_TIME)
             {
                 employeeHours = FULL_TIME_EMPLOYEE_HOURS;
                 Console.WriteLine("The full-time employee is present!");
@@ -40,7 +58,7 @@ namespace empWageProblem
             {
                 employeeHours = ABSENT_EMPLOYEE_HOURS;
                 Console.WriteLine("The employee is absent!");
-            }
+            }*/
 
             employeeWage = HOURLY_WAGE * employeeHours;
             Console.WriteLine("The number of working hours of employee is : " + employeeHours);
