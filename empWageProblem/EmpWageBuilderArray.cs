@@ -4,21 +4,15 @@ using System.Text;
 
 namespace empWageProblem
 {
-    public class EmpWageBuilderArray : CompanyEmpWage.IEmployeeWage
+    public class EmpWageBuilderArray : IEmployeeWage
     {
         //constants
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
         private int numOfCompany = 0;
-        private CompanyEmpWage[] companyEmpWageArray;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmpWageBuilderArray"/> class.
-        /// </summary>
-        public EmpWageBuilderArray()
-        {
-            this.companyEmpWageArray = new CompanyEmpWage[5];
-        }
+        //creates a list of companyempwage
+        List<CompanyEmpWage> companyEmpWageArray = new List<CompanyEmpWage>();
 
         /// <summary>
         /// Adds the company emp wage.
@@ -29,10 +23,9 @@ namespace empWageProblem
         /// <param name="maxHoursPerMonth">The maximum hours per month.</param>
         public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            companyEmpWageArray[this.numOfCompany] = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
+            companyEmpWageArray.Add(new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth));
             numOfCompany++;
         }
-
         /// <summary>
         /// Computes the emp wage.
         /// </summary>
@@ -73,7 +66,7 @@ namespace empWageProblem
                         break;
                 }
                 totalEmpHrs += empHrs;
-                Console.WriteLine("Day:" + totalWorkingDays + " Emp hrs " + empHrs);
+                Console.WriteLine("Day:" + totalWorkingDays + " Emp hrs " + empHrs + "  Daily Wage:" + (empHrs * companyEmpWage.empRatePerHour));
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }

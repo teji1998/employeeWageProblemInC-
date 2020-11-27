@@ -13,33 +13,49 @@ namespace empWageProblem
         public int maxHoursPerMonth;
         public int totalEmpWage;
 
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CompanyEmpWage"/> class.
+        /// </summary>
+        /// <param name="company">The company.</param>
+        /// <param name="empRatePerHour">The emp rate per hour.</param>
+        /// <param name="numOfWorkingDays">The number of working days.</param>
+        /// <param name="maxHoursPerMonth">The maximum hours per month.</param>
         public CompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            //this is used to refer the current instances
             this.company = company;
             this.empRatePerHour = empRatePerHour;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHoursPerMonth = maxHoursPerMonth;
         }
 
+
+        /// <summary>
+        /// Sets the total emp wage.
+        /// </summary>
+        /// <param name="totalEmpWage">The total emp wage.</param>
+        /// <returns></returns>
         public void setTotalEmpWage(int totalEmpWage)
         {
             this.totalEmpWage = totalEmpWage;
         }
 
-        //this method returns the string itself
+        /// <summary>
+        /// this method returns the string itself.
+        /// </summary>
+        /// <returns></returns>
         public string toString()
         {
             return "Total Emp Wage for company: " + this.company + " is: " + this.totalEmpWage;
         }
+    }
 
-        public interface IEmployeeWage
-        {
-            public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth);
-            public int computeEmpWage(CompanyEmpWage companyEmpWage);
-            public void computeEmpWage();
-        }
+
+    public interface IEmployeeWage
+    {
+        public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth);
+        public int computeEmpWage(CompanyEmpWage companyEmpWage);
+        public void computeEmpWage();
     }
 }
- 
+}
+
