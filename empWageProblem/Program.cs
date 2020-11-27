@@ -7,12 +7,12 @@ namespace empWageProblem
         //constant
         const int IS_FULL_TIME = 1;
         const int IS_PART_TIME = 2;
-        const int HOURLY_WAGE = 20;
+       // const int HOURLY_WAGE = 20;
         const int FULL_TIME_EMPLOYEE_HOURS = 8;
         const int PART_TIME_EMPLOYEE_HOURS = 4;
         const int ABSENT_EMPLOYEE_HOURS = 0;
-        const int NUMBER_OF_WORKING_DAYS = 20;
-        const int MAXIMUM_WORKING_HOURS = 100;
+       // const int NUMBER_OF_WORKING_DAYS = 20;
+        //const int MAXIMUM_WORKING_HOURS = 100;
 
         //To check if employee present or not
         public static int EmployeeCheck()
@@ -28,11 +28,11 @@ namespace empWageProblem
             //Welcome message
             Console.WriteLine("Welcome to employee wage computation problem!");
 
-            Console.WriteLine("The monthly wage of the employee is : " + ComputingTheEmployeeSalary());
+            Console.WriteLine("The monthly wage of the employee of company : " + ComputingTheEmployeeSalary("EXO", 10, 5, 30));
         }
-        
+
         //Method to find the total salary of employee
-        public static int ComputingTheEmployeeSalary()
+        public static int ComputingTheEmployeeSalary(String company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             //variables
             int employeeHours = 0;
@@ -41,7 +41,7 @@ namespace empWageProblem
             int totalEmployeeHours = 0;
             int totalEmployeeDays = 0;
 
-            while (totalEmployeeHours <= MAXIMUM_WORKING_HOURS && totalEmployeeDays < NUMBER_OF_WORKING_DAYS)
+            while (totalEmployeeHours <= maxHoursPerMonth && totalEmployeeDays < numOfWorkingDays)
             {
                 totalEmployeeDays++;
                 // using switch case to check if employee is present or not
@@ -68,8 +68,8 @@ namespace empWageProblem
                 Console.WriteLine("For day : " + totalEmployeeDays + " and hours " + employeeHours);
 
                 //To calculate daily wage
-                employeeWage = HOURLY_WAGE * employeeHours;
-                Console.WriteLine("Daily wage : " + employeeWage);
+                employeeWage = empRatePerHour * employeeHours;
+                Console.WriteLine("Daily wage : " + employeeWage + " and the total hours:" + totalEmployeeHours);
 
                 //To calculate total wage
                 totalEmployeeWage += employeeWage;
