@@ -4,17 +4,18 @@ using System.Text;
 
 namespace empWageProblem
 {
-    class Program
+    class EmpWageBuilder
     {
         static void Main(string[] args)
         {
             //Welcome message
             Console.WriteLine("Welcome to employee wage computation problem!");
-            EmployeeObject starBucks = new EmployeeObject("Starbucks", 20, 10, 60);
-            starBucks.ComputingTheEmployeeSalary();
-            Console.WriteLine(starBucks.toString());
+
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addCompanyEmpWage("Dmart", 20, 2, 10);
+            empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
+            empWageBuilder.computeEmpWage();
 
         }
     }
 }
-
