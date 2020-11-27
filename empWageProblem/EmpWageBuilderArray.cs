@@ -11,9 +11,8 @@ namespace empWageProblem
         public const int IS_PART_TIME = 2;
         private int numOfCompany = 0;
 
-        //creates a list of companyempwage
+        ////creates a list of companyempwage
         List<CompanyEmpWage> companyEmpWageArray = new List<CompanyEmpWage>();
-
         /// <summary>
         /// Adds the company emp wage.
         /// </summary>
@@ -26,6 +25,7 @@ namespace empWageProblem
             companyEmpWageArray.Add(new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth));
             numOfCompany++;
         }
+
         /// <summary>
         /// Computes the emp wage.
         /// </summary>
@@ -71,6 +71,5 @@ namespace empWageProblem
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
     }
-
 }
 

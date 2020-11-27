@@ -28,27 +28,19 @@ namespace empWageProblem
             this.maxHoursPerMonth = maxHoursPerMonth;
         }
 
-
         /// <summary>
         /// Sets the total emp wage.
         /// </summary>
         /// <param name="totalEmpWage">The total emp wage.</param>
-        /// <returns></returns>
         public void setTotalEmpWage(int totalEmpWage)
         {
             this.totalEmpWage = totalEmpWage;
         }
-
-        /// <summary>
-        /// this method returns the string itself.
-        /// </summary>
-        /// <returns></returns>
         public string toString()
         {
             return "Total Emp Wage for company: " + this.company + " is: " + this.totalEmpWage;
         }
     }
-
 
     public interface IEmployeeWage
     {
@@ -57,5 +49,5 @@ namespace empWageProblem
         public void computeEmpWage();
     }
 }
-}
+
 
