@@ -4,7 +4,7 @@ using System.Text;
 
 namespace empWageProblem
 {
-    class EmpWageBuilderArray
+    public class EmpWageBuilderArray : CompanyEmpWage.IEmployeeWage
     {
         //constants
         public const int IS_FULL_TIME = 1;
@@ -12,21 +12,30 @@ namespace empWageProblem
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmpWageBuilderArray"/> class.
+        /// </summary>
         public EmpWageBuilderArray()
         {
             this.companyEmpWageArray = new CompanyEmpWage[5];
         }
 
-
+        /// <summary>
+        /// Adds the company emp wage.
+        /// </summary>
+        /// <param name="company">The company.</param>
+        /// <param name="empRatePerHour">The emp rate per hour.</param>
+        /// <param name="numOfWorkingDays">The number of working days.</param>
+        /// <param name="maxHoursPerMonth">The maximum hours per month.</param>
         public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             companyEmpWageArray[this.numOfCompany] = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
             numOfCompany++;
         }
 
-
-        // Computes the emp wage.
-
+        /// <summary>
+        /// Computes the emp wage.
+        /// </summary>
         public void computeEmpWage()
         {
             for (int i = 0; i < numOfCompany; i++)
@@ -36,14 +45,16 @@ namespace empWageProblem
             }
         }
 
-
+        /// <summary>
+        /// Computes the emp wage.
+        /// </summary>
+        /// <param name="companyEmpWage">The company emp wage.</param>
+        /// <returns></returns>
         public int computeEmpWage(CompanyEmpWage companyEmpWage)
         {
             int empHrs = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
-            ///While loop is used to check maximum working hours and number of working days.
-            ///if it is true then it executes
             while (totalEmpHrs <= companyEmpWage.maxHoursPerMonth && totalWorkingDays < companyEmpWage.numOfWorkingDays)
             {
                 totalWorkingDays++;
@@ -69,3 +80,4 @@ namespace empWageProblem
     }
 
 }
+
